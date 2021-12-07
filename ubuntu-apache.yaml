@@ -1,0 +1,21 @@
+---
+- name: install apache server & update ubuntu packages
+  become: yes
+  hosts: all
+  tasks: 
+    - name: install apache & updating the ubuntu packages
+      apt:
+      name: install apache
+      update_cache: yes
+      state: present
+     tasks
+       - name: installing nginx server
+       become: yes
+       hosts: all
+       tasks:
+          - name: install nginx
+       apt:
+       name: installng nginx
+       update_cache: yes
+       state: present
+....
