@@ -1,0 +1,21 @@
+---
+- name: installing multiple servers & updating ubuntu packages
+  become: yes
+  hosts: all
+  tasks: 
+    - name: installing apache server & update the ubuntu packages
+      apt: 
+      name: install apache2
+      update_cache: yes
+      state: present
+    - name: inatalling php-mysql
+      apt: 
+      name: install php-mysql
+      update_cache: yes
+      state: present
+    -name: install lampstack
+     apt:
+     name: install lampstack & update the packages
+     update_cache: yes
+     state: present
+...
