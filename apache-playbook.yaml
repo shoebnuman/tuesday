@@ -1,0 +1,11 @@
+...
+- name: installing apache server
+  hosts: all
+  become: yes
+  task:
+    - name: install apache2
+      apt: 
+      name: install apache
+      update_cache: yes
+      state: present
+...
